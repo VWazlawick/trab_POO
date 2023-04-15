@@ -11,12 +11,14 @@ public class Cidade extends Estado{
     public Cidade() {
     }
 
-    public Cidade(int idCidade, String nmCidade, Estado estado, int idEstado, String nmEstado) {
-        super(idEstado, nmEstado);
+    public Cidade(int idCidade, String nmCidade, Estado estado, int idEstado, String nmEstado, int idPais, String nmPais) {
+        super(idEstado, nmEstado, idPais, nmPais);
         this.idCidade = idCidade;
         this.nmCidade = nmCidade;
         this.estado = estado;
     }
+
+   
 
     public int getIdCidade() {
         return idCidade;

@@ -2,6 +2,7 @@ package br.unipar.trabalho_poo.model;
 
 public class Livro {
     private String nomeLivro;
+    private int idLivro;
     private int anoPubli;
     private String genero;
     private double precoLivro;
@@ -13,8 +14,9 @@ public class Livro {
     public Livro() {
     }
 
-    public Livro(String nomeLivro, int anoPubli, String genero, double precoLivro, String editora, int nrPaginas, int qtdEstoque, Autor autor) {
+    public Livro(String nomeLivro, int idLivro, int anoPubli, String genero, double precoLivro, String editora, int nrPaginas, int qtdEstoque, Autor autor) {
         this.nomeLivro = nomeLivro;
+        this.idLivro = idLivro;
         this.anoPubli = anoPubli;
         this.genero = genero;
         this.precoLivro = precoLivro;
@@ -23,6 +25,8 @@ public class Livro {
         this.qtdEstoque = qtdEstoque;
         this.autor = autor;
     }
+
+    
 
     public int getNrPaginas() {
         return nrPaginas;
@@ -88,10 +92,21 @@ public class Livro {
         this.autor = autor;
     }
 
+    public int getIdLivro() {
+        return idLivro;
+    }
+
+    public void setIdLivro(int idLivro) {
+        this.idLivro = idLivro;
+    }
+
     @Override
     public String toString() {
-        return "Livro{" + "nomeLivro=" + nomeLivro + ", anoPubli=" + anoPubli + ", genero=" + genero + ", precoLivro=" + precoLivro + ", editora=" + editora + ", nrPaginas=" + nrPaginas + ", qtdEstoque=" + qtdEstoque + ", autor=" + autor + '}';
+        return "Livro{" + "nomeLivro=" + nomeLivro + ", idLivro=" + idLivro + ", anoPubli=" + anoPubli + ", genero=" + genero + ", precoLivro=" + precoLivro + ", editora=" + editora + ", nrPaginas=" + nrPaginas + ", qtdEstoque=" + qtdEstoque + ", autor=" + autor + '}';
     }
+
+    
+    
 
     
 
