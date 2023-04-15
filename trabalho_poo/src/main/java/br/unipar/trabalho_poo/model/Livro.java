@@ -6,15 +6,17 @@ public class Livro {
     private int anoPubli;
     private String genero;
     private double precoLivro;
-    private String editora;
+    private Editora editora;
     private int nrPaginas;
     private int qtdEstoque;
     private Autor autor;
+    private double custo;    
 
     public Livro() {
     }
 
-    public Livro(String nomeLivro, int idLivro, int anoPubli, String genero, double precoLivro, String editora, int nrPaginas, int qtdEstoque, Autor autor) {
+    public Livro(String nomeLivro, int idLivro, int anoPubli, String genero, 
+        double precoLivro, Editora editora, int nrPaginas, int qtdEstoque, Autor autor, double custo) {
         this.nomeLivro = nomeLivro;
         this.idLivro = idLivro;
         this.anoPubli = anoPubli;
@@ -24,9 +26,10 @@ public class Livro {
         this.nrPaginas = nrPaginas;
         this.qtdEstoque = qtdEstoque;
         this.autor = autor;
+        this.custo = custo;
     }
 
-    
+        
 
     public int getNrPaginas() {
         return nrPaginas;
@@ -43,14 +46,6 @@ public class Livro {
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
     }
-
-    public String getEditora() {
-        return editora;
-    }
-
-    public void setEditora(String editora) {
-        this.editora = editora;
-    }   
 
     public String getNomeLivro() {
         return nomeLivro;
@@ -100,11 +95,33 @@ public class Livro {
         this.idLivro = idLivro;
     }
 
-    @Override
-    public String toString() {
-        return "Livro{" + "nomeLivro=" + nomeLivro + ", idLivro=" + idLivro + ", anoPubli=" + anoPubli + ", genero=" + genero + ", precoLivro=" + precoLivro + ", editora=" + editora + ", nrPaginas=" + nrPaginas + ", qtdEstoque=" + qtdEstoque + ", autor=" + autor + '}';
+    public Editora getEditora() {
+        return editora;
     }
 
+    public void setEditora(Editora editora) {
+        this.editora = editora;
+    }
+
+    public double getCusto() {
+        return custo;
+    }
+
+    public void setCusto(double custo) {
+        this.custo = custo;
+    }
+
+    @Override
+    public String toString() {
+        return "\nLivro{" + "\nnomeLivro=" + nomeLivro + ", \nidLivro=" + idLivro + 
+                ", \nanoPubli=" + anoPubli + ", \ngenero=" + genero + ", \nprecoLivro=" 
+                + precoLivro + ", \neditora=" + editora + ", \nnrPaginas=" + nrPaginas 
+                + ", \nqtdEstoque=" + qtdEstoque + ", \nautor=" + autor + ", \ncusto=" 
+                + custo + '}';
+    }
+
+    
+    
     
     
 

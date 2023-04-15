@@ -53,8 +53,8 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "nomeCliente=" + nomeCliente + ", cpf=" + cpf 
-                + ", dtNasc=" + dtNasc + ", endereco=" + endereco + '}';
+        return "\nCliente{" + "\nnomeCliente=" + nomeCliente + ", \ncpf=" + cpf 
+                + ", \ndtNasc=" + dtNasc + ", \nendereco=" + endereco + '}';
     }
     
     

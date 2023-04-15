@@ -61,7 +61,9 @@ public class Venda {
 
     @Override
     public String toString() {
-        return "Venda{" + "idVenda=" + idVenda + ", valorTotal=" + valorTotal + ", qtdTotal=" + qtdTotal + ", cliente=" + cliente + ", listaPagamento=" + listaPagamento + '}';
+        return "\nVenda{" + "\nidVenda=" + idVenda + ", \nvalorTotal=" + valorTotal + 
+                ", \nqtdTotal=" + qtdTotal + ", \ncliente=" + cliente + ", \nlistaPagamento=" 
+                + listaPagamento + '}';
     }
 
     

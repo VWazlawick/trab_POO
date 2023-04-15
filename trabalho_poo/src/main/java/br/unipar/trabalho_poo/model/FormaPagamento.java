@@ -30,7 +30,8 @@ public class FormaPagamento {
 
     @Override
     public String toString() {
-        return "FormaPagamento{" + "idFormaPagamento=" + idFormaPagamento + ", dsFormaPagamento=" + dsFormaPagamento + '}';
+        return "\nFormaPagamento{" + "\nidFormaPagamento=" + idFormaPagamento + 
+                ", \ndsFormaPagamento=" + dsFormaPagamento + '}';
     }
     
     

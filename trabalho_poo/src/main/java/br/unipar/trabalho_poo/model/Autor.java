@@ -1,15 +1,15 @@
 package br.unipar.trabalho_poo.model;
 
 public class Autor {
-    private int idLivro;
+    private int idAutor;
     private String Nome;
     private String nacionalidade;
 
     public Autor() {
     }
 
-    public Autor(int idLivro, String Nome, String nacionalidade) {
-        this.idLivro = idLivro;
+    public Autor(int idAutor, String Nome, String nacionalidade) {
+        this.idAutor = idAutor;
         this.Nome = Nome;
         this.nacionalidade = nacionalidade;
     }
@@ -32,17 +32,18 @@ public class Autor {
         this.nacionalidade = nacionalidade;
     }
 
-    public int getIdLivro() {
-        return idLivro;
+    public int getIdAutor() {
+        return idAutor;
     }
 
-    public void setIdLivro(int idLivro) {
-        this.idLivro = idLivro;
+    public void setIdAutor(int idAutor) {
+        this.idAutor = idAutor;
     }
 
     @Override
     public String toString() {
-        return "Autor{" + "idLivro=" + idLivro + ", Nome=" + Nome + ", nacionalidade=" + nacionalidade + '}';
+        return "\nAutor{" + "\nidAutor=" + idAutor + ", \nNome=" + Nome +
+                ", \nnacionalidade=" + nacionalidade + '}';
     }
 
     

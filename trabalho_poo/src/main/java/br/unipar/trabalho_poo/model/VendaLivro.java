@@ -73,7 +73,9 @@ public class VendaLivro {
 
     @Override
     public String toString() {
-        return "VendaLivro{" + "listaLivro=" + listaLivro + ", venda=" + venda + ", valorUnd=" + valorUnd + ", qtdProduto=" + qtdProduto + ", valorTotalProd=" + valorTotalProd + ", desconto=" + desconto + '}';
+        return "\nVendaLivro{" + "\nlistaLivro=" + listaLivro + ", \nvenda=" + 
+                venda + ", \nvalorUnd=" + valorUnd + ", \nqtdProduto=" + qtdProduto + 
+                ", \nvalorTotalProd=" + valorTotalProd + ", \ndesconto=" + desconto + '}';
     }
     
     

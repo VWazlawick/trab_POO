@@ -33,7 +33,7 @@ public class Pais {
 
     @Override
     public String toString() {
-        return "Pais{" + "idPais=" + idPais + ", nmPais=" + nmPais + '}';
+        return "\nPais{" + "\nidPais=" + idPais + ", \nnmPais=" + nmPais + '}';
     }
     
     

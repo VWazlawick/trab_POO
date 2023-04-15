@@ -34,7 +34,7 @@ public class Estado extends Pais{
 
     @Override
     public String toString() {
-        return "Estado{" + "idEstado=" + idEstado + ", nmEstado=" +
+        return "\nEstado{" + "\nidEstado=" + idEstado + ", \nnmEstado=" +
                 nmEstado + '}';
     }
 
