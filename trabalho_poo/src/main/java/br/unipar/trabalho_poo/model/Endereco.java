@@ -75,7 +75,7 @@ public class Endereco {
     public String toString() {
         return "\nEndereco{" + "\nnmRua=" + nmRua + ", \nnmBairro=" + nmBairro 
                 + ", \nnrCasa=" + nrCasa + ", \ncep=" + cep + ", \ncomplemento=" + 
-                complemento + ", \ncidade=" + cidade + '}';
+                complemento + "\n "+ cidade + '}';
     }
 
     

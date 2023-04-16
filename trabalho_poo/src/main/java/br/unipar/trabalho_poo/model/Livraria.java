@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Livraria {
     private int idLivraria;
     private String dsLivraria;
-    private ArrayList<VendaLivro> vendaLivro = new ArrayList<>();
+    private ArrayList<Venda> vendas = new ArrayList<>();
 
     public Livraria() {
     }
@@ -31,17 +31,19 @@ public class Livraria {
         this.dsLivraria = dsLivraria;
     }
 
-    public ArrayList<VendaLivro> getVendaLivro() {
-        return vendaLivro;
+    public ArrayList<Venda> getVendas() {
+        return vendas;
     }
 
-    public void setVendaLivro(VendaLivro vendaLivro) {
-        this.vendaLivro.add(vendaLivro);
+    public void setVendas(Venda vendas) {
+        this.vendas.add(vendas);
     }
+
+    
 
     @Override
     public String toString() {
-        return "Livraria{" + "idLivraria=" + idLivraria + ", dsLivraria=" + dsLivraria + ", vendaLivro=" + vendaLivro + '}';
+        return "Livraria{" + "idLivraria=" + idLivraria + ", dsLivraria=" + dsLivraria + ", vendas=" + vendas + '}';
     }
 
     

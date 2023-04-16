@@ -3,8 +3,7 @@ package br.unipar.trabalho_poo.model;
 import java.util.ArrayList;
 
 public class VendaLivro {
-    private ArrayList<Livro> listaLivro = new ArrayList<>();
-    private Venda venda;
+    private Livro livro;
     private double valorUnd;
     private int qtdProduto;
     private double valorTotalProd;
@@ -14,29 +13,20 @@ public class VendaLivro {
         
     }
 
-    public VendaLivro(ArrayList<Livro> listaLivro, Venda venda, double valorUnd, int qtdProduto, double valorTotalProd, double desconto) {
-        this.venda = venda;
+    public VendaLivro(Livro livro, double valorUnd, int qtdProduto, double valorTotalProd, double desconto) {
+        this.livro = livro;
         this.valorUnd = valorUnd;
         this.qtdProduto = qtdProduto;
         this.valorTotalProd = valorTotalProd;
         this.desconto = desconto;
     }
 
-    
-    public ArrayList<Livro> getListaLivro() {
-        return listaLivro;
+    public Livro getLivro() {
+        return livro;
     }
 
-    public void setListaLivro(Livro livro) {
-        this.listaLivro.add(livro);
-    }
-
-    public Venda getVenda() {
-        return venda;
-    }
-
-    public void setVenda(Venda venda) {
-        this.venda = venda;
+    public void setLivro(Livro livro) {
+        this.livro = livro;
     }
 
     public double getValorUnd() {
@@ -45,6 +35,7 @@ public class VendaLivro {
 
     public void setValorUnd(double valorUnd) {
         this.valorUnd = valorUnd;
+        this.valorTotalProd = (valorUnd-desconto) * qtdProduto;
     }
 
     public int getQtdProduto() {
@@ -53,6 +44,8 @@ public class VendaLivro {
 
     public void setQtdProduto(int qtdProduto) {
         this.qtdProduto = qtdProduto;
+        this.valorTotalProd = (valorUnd-desconto) * qtdProduto;
+        livro.setQtdEstoque(livro.getQtdEstoque()-qtdProduto);
     }
 
     public double getValorTotalProd() {
@@ -69,14 +62,16 @@ public class VendaLivro {
 
     public void setDesconto(double desconto) {
         this.desconto = desconto;
+        this.valorTotalProd = (valorUnd-desconto) * qtdProduto;
     }
 
     @Override
     public String toString() {
-        return "\nVendaLivro{" + "\nlistaLivro=" + listaLivro + ", \nvenda=" + 
-                venda + ", \nvalorUnd=" + valorUnd + ", \nqtdProduto=" + qtdProduto + 
-                ", \nvalorTotalProd=" + valorTotalProd + ", \ndesconto=" + desconto + '}';
+        return "\n--------------------" + "\nlivro=" + livro.getNomeLivro() + ", \nvalorUnd=" + valorUnd +
+                ", \ndesconto=" + desconto + ", \nqtdProduto=" + qtdProduto + ", \nvalorTotalProd=" 
+                + valorTotalProd;
     }
+    
     
     
 

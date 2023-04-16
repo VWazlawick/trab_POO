@@ -1,9 +1,10 @@
 package br.unipar.trabalho_poo.model;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 public class Cliente {
-    
+    private int idCliente;
     private String nomeCliente;
     private String cpf;
     private Date dtNasc;
@@ -11,13 +12,16 @@ public class Cliente {
 
     public Cliente() {
     }
-    
-    public Cliente(String nomeCliente, String cpf, Date dtNasc, Endereco endereco) {
+
+    public Cliente(int idCliente, String nomeCliente, String cpf, Date dtNasc, Endereco endereco) {
+        this.idCliente = idCliente;
         this.nomeCliente = nomeCliente;
         this.cpf = cpf;
         this.dtNasc = dtNasc;
         this.endereco = endereco;
     }
+    
+    
 
     public String getNomeCliente() {
         return nomeCliente;
@@ -51,10 +55,23 @@ public class Cliente {
         this.endereco = endereco;
     }
 
+    public void alterarCadastrar(char opcao){
+        
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+    
+    
     @Override
     public String toString() {
-        return "\nCliente{" + "\nnomeCliente=" + nomeCliente + ", \ncpf=" + cpf 
-                + ", \ndtNasc=" + dtNasc + ", \nendereco=" + endereco + '}';
+        return "\nCliente{" + "\nnomeCliente: " + nomeCliente + "- cpf:" + cpf 
+                + ", \ndtNasc:" + dtNasc + '}';
     }
     
     
